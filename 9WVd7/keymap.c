@@ -11,7 +11,13 @@ enum custom_keycodes {
 };
 
 
+// Trivium custom Shift pairs
+const key_override_t trivium_comma_semicolon =
+    ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, KC_SCLN);
 
+const key_override_t *key_overrides[] = {
+    &trivium_comma_semicolon
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
